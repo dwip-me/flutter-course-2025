@@ -16,7 +16,7 @@ This repository contains all my work from **"Flutter & Dart - The Complete Guide
 ```bash
 flutter-course-2025/
 ├── 💁️ course_projects/              # Original course projects
-│   ├── 📂 01_roll_dice_app/         # Course version of Roll Dice App  
+│   ├── 📂 course_roll_dice_app/         # Course version of Roll Dice App  
 │
 ├── 💁️ my_projects/                  # My own customized versions  
 │   ├── 📂 my_roll_dice_app/         # My improved version of Roll Dice App  
