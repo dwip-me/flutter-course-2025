@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -8,15 +9,34 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  final randomNum = Random();
+  int diceNum = 1;
+
+  void rollDice() {
+    setState(() {
+      diceNum = randomNum.nextInt(6) + 1;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Center(
-          child: Text(
-            'Day 1',
-            style: TextStyle(color: Colors.white, fontSize: 25),
+          child: Column(
+            children: [
+              Image.asset("assets/dice-images/dice-$diceNum.png", width: 250),
+              SizedBox(height: 30),
+              ElevatedButton.icon(
+                onPressed: rollDice,
+                label: Text(
+                  "ROLL",
+                  style: TextStyle(fontSize: 25, letterSpacing: 5),
+                ),
+                icon: Icon(Icons.replay_rounded),
+              ),
+            ],
           ),
         ),
       ],

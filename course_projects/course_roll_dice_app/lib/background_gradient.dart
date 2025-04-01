@@ -2,19 +2,25 @@ import 'package:course_roll_dice_app/home.dart';
 import 'package:flutter/material.dart';
 
 class BackgroundGradient extends StatelessWidget {
-  const BackgroundGradient({super.key});
+  const BackgroundGradient({
+    super.key,
+    required this.gradientColor,
+    required this.alignmentBegin,
+    required this.alignmentEnd,
+  });
+
+  final List<Color> gradientColor;
+  final AlignmentGeometry alignmentBegin;
+  final AlignmentGeometry alignmentEnd;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [
-            const Color.fromARGB(255, 78, 45, 136),
-            const Color.fromARGB(255, 78, 47, 161),
-          ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
+          colors: gradientColor,
+          begin: alignmentBegin,
+          end: alignmentEnd,
         ),
       ),
       child: Home(),
