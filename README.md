@@ -30,11 +30,19 @@ flutter-course-2025/
 
 ## 🎥 **Course vs. My Version (Side-by-Side Comparison)**  
 
-| 📌 Course Version | ✨ My Version |
+| 📌 Course Version Roll Dice App Home | ✨ My Version Roll Dice App Home | 
 |------------------|--------------|
-| [![Course Video]()]() | [![My Version Video]()]() |
+| ![Course Video](assets/course_roll_dice_app_home.png) | ![My Version Video](assets/my_roll_dice_app_home.png) |
 
-📌 **Click the images** to watch the videos! 🎮  
+## 📌 Comparison with Course Version (roll dice app)
+
+- **Image Path Management**:
+  - **Course Version**: Requires image filenames to follow a numerical pattern (e.g., `dice-1.png`, `dice-2.png`).
+  - **My Version**: Uses a list to store image paths, allowing for any filenames and improving maintainability.
+
+- **Accessibility**:
+  - **Course Version**: Lacks accessibility features.
+  - **My Version**: Includes the `Semantics` widget to provide screen reader support, making the app more inclusive.
 
 ---
 
