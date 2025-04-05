@@ -19,17 +19,19 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
-  late Widget activeScreen;
+  // late Widget activeScreen;
 
-  @override
-  void initState() {
-    activeScreen = Home(startQuiz: switchScreen);
-    super.initState();
-  }
+  // @override
+  // void initState() {
+  //   activeScreen = Home(startQuiz: switchScreen);
+  //   super.initState();
+  // }
+
+  String activeScreen = "Home";
 
   void switchScreen() {
     setState(() {
-      activeScreen = QuestionsScreen();
+      activeScreen = "QuestionsScreen";
     });
   }
 
@@ -45,7 +47,10 @@ class _QuizState extends State<Quiz> {
               end: widget.end,
             ),
           ),
-          child: activeScreen,
+          child:
+              activeScreen == "Home"
+                  ? Home(startQuiz: switchScreen)
+                  : QuestionsScreen(),
         ),
       ),
     );
