@@ -33,8 +33,8 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
               textAlign: TextAlign.center,
               currentQuestion.question,
               style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
+                color: const Color.fromARGB(255, 201, 153, 251),
+                fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
             ),
